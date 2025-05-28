@@ -1,0 +1,62 @@
+[
+  {
+    "page_content": "TechCorp Employee Handbook - Introduction: Welcome to TechCorp, a leading software development company founded in 2015. Our mission is to create innovative solutions that transform how businesses operate in the digital age. We specialize in cloud computing, artificial intelligence, and enterprise software solutions. Our core values include innovation, collaboration, integrity, and continuous learning. All employees are expected to uphold these values in their daily work and interactions with colleagues and clients.",
+    "metadata": {"source": "employee_handbook.pdf", "page": 1, "section": "introduction"}
+  },
+  {
+    "page_content": "Remote Work Policy: TechCorp supports flexible work arrangements to promote work-life balance. Employees may work remotely up to 3 days per week with manager approval. Remote workers must maintain a dedicated workspace with reliable internet connection (minimum 25 Mbps download speed). All remote work sessions must be logged in the company time tracking system. Employees working remotely are expected to be available during core business hours (10 AM - 3 PM EST) and attend all scheduled meetings via video conference.",
+    "metadata": {"source": "employee_handbook.pdf", "page": 15, "section": "remote_work"}
+  },
+  {
+    "page_content": "Vacation and Time Off Policy: Full-time employees accrue 15 days of paid vacation annually, increasing to 20 days after 3 years of service. Sick leave is provided at 10 days per year. Personal days are granted at 3 days annually. Vacation requests must be submitted at least 2 weeks in advance through the HR portal. During busy project periods (typically Q4), vacation approval may be limited. Unused vacation days can be carried over up to 5 days into the next calendar year.",
+    "metadata": {"source": "employee_handbook.pdf", "page": 22, "section": "time_off"}
+  },
+  {
+    "page_content": "API Documentation - Authentication: Our REST API uses JWT (JSON Web Tokens) for authentication. To access protected endpoints, include the Authorization header with 'Bearer' followed by your JWT token. Tokens expire after 24 hours and must be refreshed using the /auth/refresh endpoint. API keys are also supported for server-to-server communication. Rate limiting is enforced at 1000 requests per hour per API key. Exceeded limits will result in HTTP 429 Too Many Requests responses.",
+    "metadata": {"source": "api_docs.md", "page": 5, "section": "authentication"}
+  },
+  {
+    "page_content": "Database Configuration Guide: The application uses PostgreSQL 13+ as the primary database. Connection settings should be configured in the .env file with the following variables: DB_HOST, DB_PORT (default 5432), DB_NAME, DB_USER, and DB_PASSWORD. For production environments, SSL mode should be enabled by setting DB_SSL_MODE=require. Connection pooling is handled by the application with a maximum of 20 concurrent connections. Database migrations are managed using Alembic and should be run during deployment.",
+    "metadata": {"source": "setup_guide.md", "page": 8, "section": "database"}
+  },
+  {
+    "page_content": "Troubleshooting Common Issues: If the application fails to start, first check the log files in /var/log/techcorp/. Common startup errors include database connection failures, missing environment variables, and port conflicts. For database issues, verify the connection string and ensure PostgreSQL service is running. Memory errors typically indicate insufficient RAM allocation - increase the heap size in the configuration. Network timeouts may require adjusting the connection timeout settings in config.yaml.",
+    "metadata": {"source": "troubleshooting_guide.md", "page": 3, "section": "startup_issues"}
+  },
+  {
+    "page_content": "Security Best Practices: All user passwords must meet the following criteria: minimum 12 characters, include uppercase and lowercase letters, numbers, and special characters. Multi-factor authentication (MFA) is mandatory for all admin accounts and recommended for regular users. API endpoints must implement proper input validation to prevent SQL injection and XSS attacks. Sensitive data should be encrypted at rest using AES-256 encryption. Regular security audits are conducted quarterly by our external security team.",
+    "metadata": {"source": "security_guide.pdf", "page": 2, "section": "authentication"}
+  },
+  {
+    "page_content": "Performance Optimization Tips: For optimal application performance, enable Redis caching for frequently accessed data. Database queries should use proper indexing - create indexes on columns used in WHERE clauses and JOIN operations. Large file uploads should be handled asynchronously using background job queues. Monitor application metrics using our Grafana dashboard. If response times exceed 2 seconds, consider implementing database query optimization or horizontal scaling.",
+    "metadata": {"source": "performance_guide.md", "page": 12, "section": "optimization"}
+  },
+  {
+    "page_content": "Project Management Methodology: TechCorp follows Agile development practices with 2-week sprints. Each sprint begins with sprint planning meetings where the team selects user stories from the product backlog. Daily standup meetings are held at 9:30 AM to discuss progress and blockers. Sprint reviews occur at the end of each sprint to demonstrate completed features to stakeholders. Retrospective meetings help the team identify improvement opportunities. All project artifacts are managed in Jira.",
+    "metadata": {"source": "project_management.pdf", "page": 7, "section": "methodology"}
+  },
+  {
+    "page_content": "Customer Support Guidelines: Support tickets are categorized into three priority levels: Critical (response within 2 hours), High (response within 8 hours), and Normal (response within 24 hours). Critical issues include system outages, security breaches, and data loss. All support interactions must be logged in our CRM system. First-level support handles basic troubleshooting, while complex technical issues are escalated to the engineering team. Customer satisfaction surveys are sent after ticket resolution.",
+    "metadata": {"source": "support_manual.pdf", "page": 4, "section": "ticket_management"}
+  },
+  {
+    "page_content": "Cloud Infrastructure Overview: Our application runs on AWS using a microservices architecture. The production environment consists of 3 availability zones for high availability. Load balancing is handled by Application Load Balancer (ALB) with auto-scaling groups. Container orchestration uses Amazon EKS (Kubernetes) with Docker containers. Monitoring and logging are implemented using CloudWatch and ELK stack. Backup procedures include daily database snapshots and weekly full system backups stored in S3.",
+    "metadata": {"source": "infrastructure_doc.md", "page": 1, "section": "overview"}
+  },
+  {
+    "page_content": "Code Review Standards: All code changes must go through peer review before merging to the main branch. Reviewers should check for code quality, security vulnerabilities, performance implications, and adherence to coding standards. Pull requests must include unit tests with minimum 80% code coverage. Documentation updates are required for any new features or API changes. Code reviews should be completed within 48 hours to maintain development velocity. Use GitHub's review features to track approval status.",
+    "metadata": {"source": "development_standards.md", "page": 9, "section": "code_review"}
+  },
+  {
+    "page_content": "Deployment Process: Production deployments follow a blue-green deployment strategy to minimize downtime. The deployment pipeline includes automated testing, security scanning, and performance benchmarks. Deployments are scheduled during maintenance windows (Sundays 2-4 AM EST) unless it's a critical hotfix. Rollback procedures must be documented and tested quarterly. Database migrations are performed in a separate step before application deployment. All deployments require approval from both the tech lead and product manager.",
+    "metadata": {"source": "deployment_guide.md", "page": 6, "section": "production"}
+  },
+  {
+    "page_content": "Training and Development: TechCorp invests in employee growth through various learning opportunities. Each employee receives an annual training budget of $2,000 for conferences, courses, and certifications. Lunch-and-learn sessions are held monthly featuring internal presentations or external speakers. New hires participate in a 2-week onboarding program covering company culture, tools, and processes. Career development discussions occur during quarterly one-on-one meetings with managers. Technical mentorship programs pair junior developers with senior team members.",
+    "metadata": {"source": "hr_policies.pdf", "page": 18, "section": "development"}
+  },
+  {
+    "page_content": "Incident Response Plan: When a production incident occurs, the on-call engineer must acknowledge the alert within 15 minutes. Critical incidents require immediate escalation to the incident commander. Communication updates are posted to the #incidents Slack channel every 30 minutes during active incidents. Post-incident reviews are conducted within 48 hours to identify root causes and prevention measures. All incidents are documented in our incident management system with severity levels, timeline, and lessons learned.",
+    "metadata": {"source": "incident_response.pdf", "page": 3, "section": "procedures"}
+  }
+]
