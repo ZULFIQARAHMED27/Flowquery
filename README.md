@@ -133,7 +133,7 @@ Extend `ingest.py` with custom loaders:
 - Web scraping capabilities
 - Database integrations
 
-## Great Test Questions to Try with the "sample_documents.json"
+## 🎯Great Test Questions to Try with the "sample_documents.json"
 HR/Policy Questions:
 
 "How many vacation days do I get?"
