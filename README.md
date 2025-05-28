@@ -133,6 +133,43 @@ Extend `ingest.py` with custom loaders:
 - Web scraping capabilities
 - Database integrations
 
+## Great Test Questions to Try:
+HR/Policy Questions:
+
+"How many vacation days do I get?"
+"What is the remote work policy?"
+"How much is the training budget?"
+
+Technical Questions:
+
+"How do I configure the database?"
+"What are the authentication requirements?"
+"How do I troubleshoot startup issues?"
+
+Process Questions:
+
+"What is the deployment process?"
+"How long should code reviews take?"
+"What happens during an incident?"
+
+Security Questions:
+
+"What are the password requirements?"
+"How should sensitive data be encrypted?"
+
+Infrastructure Questions:
+
+"What cloud platform do we use?"
+"How is monitoring implemented?"
+
+Semantic Search Tests:
+
+Ask "How to fix problems?" (should find troubleshooting content)
+Ask "What breaks often?" (should find incident/troubleshooting info)
+Ask "Time off rules" (should find vacation policy)
+
+This sample file will let you thoroughly test your docubot's semantic understanding and retrieval capabilities across different domains and question types!
+
 ## 🚄 Performance & Scaling
 
 ### ⚡ Optimized for Speed
